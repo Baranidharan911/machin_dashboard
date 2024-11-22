@@ -1,0 +1,114 @@
+/* src/styles/Login.css */
+
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    background: #f2f2f2;
+  }
+  
+  /* .form_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  } */
+
+  /* .form_wrapper{
+    background:none ;
+  }
+   */
+  /* .form_container {
+    background: #fff;
+    width: 350px;
+    box-sizing: border-box;
+    padding: 25px;
+    border-top: 5px solid #CCCCFF;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  } */
+  
+  .title_container {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  
+  .input_field {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input_field > span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #333;
+    height: 100%;
+    border-right: 1px solid #cccccc;
+    text-align: center;
+    width: 30px;
+  }
+  
+  .input_field > span > i {
+    padding-top: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 8px 10px 9px 35px;
+    height: 35px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.30s ease-in-out;
+  }
+  
+  input[type="text"]:hover,
+  input[type="email"]:hover,
+  input[type="password"]:hover {
+    background: #fafafa;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    box-shadow: 0 0 2px 1px rgba(237, 194, 244, 0.5);
+    border: 1px solid #CCCCFF;
+    background: #fafafa;
+  }
+  
+  input[type="submit"], .button {
+    background: #a9a9fa;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    transition: all 0.30s ease-in-out;
+  }
+  
+  input[type="submit"]:hover, .button:hover {
+    background: #CCCCFF;
+  }
+  
+  input[type="submit"]:focus, .button:focus {
+    background: #CCCCFF;
+  }
+  
+  .toggle_password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .toggle_password:hover {
+    color: #666;
+  }
+  

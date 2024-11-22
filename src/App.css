@@ -1,0 +1,79 @@
+/* src/App.css */
+.App {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+  margin-left: 230px; /* Default margin when sidebar is open */
+}
+
+.content.full-width {
+  margin-left: 0; /* Margin when sidebar is closed */
+}
+
+.sidebar {
+  width: 250px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding-top: 80px;
+  transition: all 0.3s ease;
+  z-index: 1000; /* Ensure sidebar is on top */
+}
+
+.sidebar.closed {
+  width: 80px; /* Width when closed, showing only icons */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+  text-align: left;
+}
+
+.sidebar ul li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+body{
+  background-color:white ;
+  color: black;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-top: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .sidebar.closed {
+    width: 100%; /* Sidebar takes full width when closed on mobile */
+  }
+
+  .sidebar ul li {
+    display: inline-block;
+  }
+
+  .sidebar ul li a {
+    padding: 10px;
+  }
+
+  .content {
+    margin-left: 0; /* Content takes full width when sidebar is closed */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}

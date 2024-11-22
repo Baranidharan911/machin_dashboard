@@ -1,0 +1,216 @@
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  background: white;
+}
+
+.page_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Form Container */
+.form_wrapper {
+  background: #fff;
+  max-width: 400px;
+  width: 100%;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-top: 5px solid #CCCCFF;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.form_container {
+  padding: 0;
+}
+
+.title_container {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.input_field {
+  margin-bottom: 20px;
+}
+
+input[type="file"],
+input[type="submit"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cccccc;
+  margin-bottom: 10px;
+}
+
+input[type="submit"],
+.small_button {
+  background: #af8af3;
+  height: 35px;
+  line-height: 35px;
+  border: none;
+  cursor: pointer;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover,
+.small_button:hover {
+  background: #CCCCFF;
+}
+
+/* Ads Container */
+.ad_container {
+  width: 70%;
+  margin: 20px auto;
+}
+
+.ad_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid with minimum width */
+  grid-gap: 30px;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  height: 320px; /* Adjust height to accommodate both images and videos */
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #fff;
+  transition: all 0.4s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card_content {
+  z-index: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.card_desc img,
+.card_desc video {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensures both images and videos fit properly */
+  border-radius: 0.5rem;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal_content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  text-align: center;
+}
+
+.modal_buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.preview img,
+.preview video {
+  width: 100px;
+  max-height: 100px;
+  margin: 10px auto;
+  object-fit: cover;
+}
+
+.input_field {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+input[type="text"], 
+input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cccccc;
+  margin-bottom: 10px;
+}
+
+/* Upload Ad Button */
+.upload_ad_button {
+  margin-top: 60px;
+  margin-left: 900px;
+  padding: 10px 20px;
+  background-color: #af8af3;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.upload_ad_button:hover {
+  background-color: #CCCCFF;
+}
+
+/* Add Ad Button */
+.add_ad_button {
+  padding: 10px 20px;
+  background-color: #af8af3;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.add_ad_button:hover {
+  background-color: #CCCCFF;
+}
+
+/* Cancel Button */
+.cancel_ad_button {
+  padding: 10px 20px;
+  background-color: #f08080;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.cancel_ad_button:hover {
+  background-color: #ff9999;
+}
+
+/* Remove Ad Button */
+.remove_ad_button {
+  padding: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0; /* Initially hidden */
+  z-index: 2;
+}
+
+/* Show the remove button on hover */
+.card:hover .remove_ad_button {
+  opacity: 1; /* Make the button visible */
+  bottom: 10%; /* Position the button in the middle of the card */
+}
+
+/* Add Hover Effect to Cards */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}

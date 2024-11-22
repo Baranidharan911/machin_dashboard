@@ -1,0 +1,134 @@
+.dashboard-container {
+    padding: 20px;
+    background-color:white;
+    margin-top: 60px;
+}
+
+.brands-flavors-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.brand-section {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.flavors-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.flavor-item {
+    text-align: center;
+}
+
+.percentage-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.flavor-name {
+    font-size: 14px;
+    color: #333;
+}
+
+.dashboard-metrics {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.revenue-section, .top-selling-products {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 48%;
+}
+
+.revenue-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #CCCCFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.revenue-options {
+    list-style-type: none;
+    padding: 0;
+}
+
+.revenue-options li {
+    padding: 5px 0;
+}
+
+.top-selling-products table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.top-selling-products table, .top-selling-products th, .top-selling-products td {
+    border: 1px solid #ccc;
+}
+
+.top-selling-products th, .top-selling-products td {
+    padding: 10px;
+    text-align: left;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-section label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#revenue-filter {
+    padding: 5px;
+    font-size: 16px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 10px;
+    }
+
+    .brands-flavors-section {
+        flex-direction: column;
+    }
+
+    .brand-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .dashboard-metrics {
+        flex-direction: column;
+    }
+
+    .revenue-section, .top-selling-products {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

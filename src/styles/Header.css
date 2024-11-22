@@ -1,0 +1,81 @@
+.header {
+    width: calc(100% - 250px); /* Adjust width to account for the sidebar */
+    background-color:white;
+    padding: 25px 45px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 250px; /* Offset header to match sidebar width */
+    z-index: 1000;
+    transition: left 0.3s ease;
+}
+
+.header-left {
+    position: fixed; /* Fixed positioning to lock it at the corner */
+    left: 10px; /* Move the logo closer to the left corner */
+    top: 10px; /* Position the logo from the top */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align the logo to the left */
+}
+
+.header-left .logo-icon {
+    width: 40px; /* Reduce logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Move the admin profile to the right */
+}
+
+.header .admin-profile {
+    display: flex;
+    align-items: center;
+}
+
+.header .admin-profile .admin {
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+.header .admin-profile .profile-icon {
+    margin-left: 10px;
+}
+
+/* Adjust header when sidebar is closed */
+.sidebar.closed + .header {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .header {
+        width: 100%;
+        left: 0;
+    }
+
+    .header-left {
+        position: fixed;
+        left: 10px;
+        top: 10px;
+    }
+
+    .header-right {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .header .admin-profile {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
